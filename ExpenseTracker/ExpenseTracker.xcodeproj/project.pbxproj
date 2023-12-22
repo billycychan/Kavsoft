@@ -24,6 +24,8 @@
 		47119A392B35D17C00B94F58 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A382B35D17C00B94F58 /* View+Extensions.swift */; };
 		47119A3B2B35F7AF00B94F58 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A3A2B35F7AF00B94F58 /* Date+Extensions.swift */; };
 		47119A3E2B35F94600B94F58 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A3D2B35F94600B94F58 /* CardView.swift */; };
+		47119A402B35FF6000B94F58 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A3F2B35FF6000B94F58 /* TransactionCardView.swift */; };
+		47FCF0922B36296300B7BCDB /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0912B36296300B7BCDB /* SwipeAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		47119A382B35D17C00B94F58 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		47119A3A2B35F7AF00B94F58 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		47119A3D2B35F94600B94F58 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		47119A3F2B35FF6000B94F58 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		47FCF0912B36296300B7BCDB /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				47119A3D2B35F94600B94F58 /* CardView.swift */,
+				47119A3F2B35FF6000B94F58 /* TransactionCardView.swift */,
+				47FCF0912B36296300B7BCDB /* SwipeAction.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 				47119A2C2B35CE7F00B94F58 /* Transaction.swift in Sources */,
 				47119A152B35C7C900B94F58 /* ContentView.swift in Sources */,
 				47119A3E2B35F94600B94F58 /* CardView.swift in Sources */,
+				47FCF0922B36296300B7BCDB /* SwipeAction.swift in Sources */,
 				47119A232B35C82C00B94F58 /* IntroScreen.swift in Sources */,
 				47119A282B35CBC900B94F58 /* Tab.swift in Sources */,
 				47119A372B35D06900B94F58 /* Settings.swift in Sources */,
@@ -231,6 +238,7 @@
 				47119A262B35C8DD00B94F58 /* Constants.swift in Sources */,
 				47119A352B35D06200B94F58 /* Graphs.swift in Sources */,
 				47119A2A2B35CE4A00B94F58 /* Category.swift in Sources */,
+				47119A402B35FF6000B94F58 /* TransactionCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

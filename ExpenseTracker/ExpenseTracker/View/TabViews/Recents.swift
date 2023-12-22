@@ -13,7 +13,11 @@ struct Recents: View {
     
     @State private var startDate: Date = .now.startOfMonth
     @State private var endDate: Date = .now.endOfMonth
-    
+    @State private var selectedCategory: Category = .expense
+
+    /// For Animation
+    @Namespace private var animation
+
     var body: some View {
         GeometryReader {
             // For Animation Purpose
@@ -34,6 +38,13 @@ struct Recents: View {
                             
                             /// Card View
                             CardView(income: 2039, expense: 4098)
+                            
+                            /// Custom Segmented Control
+                            CustomSegmentedControl()
+                            ForEach(sampleTransactions.filter { $0.category == selectedCategory.rawValue} ) { transaction in
+                                TransactionCardView(transaction: transaction)
+                            }
+                            
                         } header: {
                             HeaderView(size)
                         }
@@ -92,6 +103,32 @@ struct Recents: View {
         }
     }
     
+    @ViewBuilder
+    func CustomSegmentedControl() -> some View {
+        HStack(spacing: 0) {
+            ForEach(Category.allCases, id: \.rawValue) { category in
+                Text(category.rawValue)
+                    .hSpacing()
+                    .padding(.vertical, 10)
+                    .background {
+                        if category == selectedCategory {
+                            Capsule()
+                                .fill(.background)
+                                .matchedGeometryEffect(id: "ACTIVETAB", in: animation)
+                        }
+                    }
+                    .contentShape(.capsule)
+                    .onTapGesture {
+                        withAnimation(.snappy) {
+                            selectedCategory = category
+                        }
+                    }
+            }
+        }
+        .background(.gray.opacity(0.15), in: .capsule)
+        .padding(.top, 5)
+    }
+        
     func headerBGOpacity(proxy: GeometryProxy) -> CGFloat {
         let minY = proxy.frame(in: .scrollView).minY
         return minY > 0 ? 0 : (-minY / 15)
