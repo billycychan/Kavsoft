@@ -21,6 +21,8 @@
 		47119A332B35D05C00B94F58 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A322B35D05C00B94F58 /* Search.swift */; };
 		47119A352B35D06200B94F58 /* Graphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A342B35D06200B94F58 /* Graphs.swift */; };
 		47119A372B35D06900B94F58 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A362B35D06900B94F58 /* Settings.swift */; };
+		47119A392B35D17C00B94F58 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A382B35D17C00B94F58 /* View+Extensions.swift */; };
+		47119A3B2B35F7AF00B94F58 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A3A2B35F7AF00B94F58 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		47119A322B35D05C00B94F58 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		47119A342B35D06200B94F58 /* Graphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphs.swift; sourceTree = "<group>"; };
 		47119A362B35D06900B94F58 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		47119A382B35D17C00B94F58 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		47119A3A2B35F7AF00B94F58 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				47119A252B35C8DD00B94F58 /* Constants.swift */,
+				47119A382B35D17C00B94F58 /* View+Extensions.swift */,
+				47119A3A2B35F7AF00B94F58 /* Date+Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -208,6 +214,8 @@
 				47119A372B35D06900B94F58 /* Settings.swift in Sources */,
 				47119A132B35C7C900B94F58 /* ExpenseTrackerApp.swift in Sources */,
 				47119A332B35D05C00B94F58 /* Search.swift in Sources */,
+				47119A3B2B35F7AF00B94F58 /* Date+Extensions.swift in Sources */,
+				47119A392B35D17C00B94F58 /* View+Extensions.swift in Sources */,
 				47119A262B35C8DD00B94F58 /* Constants.swift in Sources */,
 				47119A352B35D06200B94F58 /* Graphs.swift in Sources */,
 				47119A2A2B35CE4A00B94F58 /* Category.swift in Sources */,
