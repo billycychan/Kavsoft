@@ -22,8 +22,8 @@ struct ContentView: View {
                 .tag(Tab.search)
                 .tabItem { Tab.search.tabContent }
             Graphs()
-                .tag(Tab.recents)
-                .tabItem { Tab.recents.tabContent }
+                .tag(Tab.charts)
+                .tabItem { Tab.charts.tabContent }
             Settings()
                 .tag(Tab.settings)
                 .tabItem { Tab.settings.tabContent }

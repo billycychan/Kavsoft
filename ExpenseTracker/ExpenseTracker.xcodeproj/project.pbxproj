@@ -26,6 +26,7 @@
 		47119A3E2B35F94600B94F58 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A3D2B35F94600B94F58 /* CardView.swift */; };
 		47119A402B35FF6000B94F58 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A3F2B35FF6000B94F58 /* TransactionCardView.swift */; };
 		47FCF0922B36296300B7BCDB /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0912B36296300B7BCDB /* SwipeAction.swift */; };
+		47FCF0942B362AE600B7BCDB /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0932B362AE600B7BCDB /* DateFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		47119A3D2B35F94600B94F58 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		47119A3F2B35FF6000B94F58 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
 		47FCF0912B36296300B7BCDB /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		47FCF0932B362AE600B7BCDB /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				47119A3D2B35F94600B94F58 /* CardView.swift */,
 				47119A3F2B35FF6000B94F58 /* TransactionCardView.swift */,
 				47FCF0912B36296300B7BCDB /* SwipeAction.swift */,
+				47FCF0932B362AE600B7BCDB /* DateFilterView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				47119A2E2B35CED800B94F58 /* TintColor.swift in Sources */,
 				47119A312B35D05600B94F58 /* Recents.swift in Sources */,
+				47FCF0942B362AE600B7BCDB /* DateFilterView.swift in Sources */,
 				47119A2C2B35CE7F00B94F58 /* Transaction.swift in Sources */,
 				47119A152B35C7C900B94F58 /* ContentView.swift in Sources */,
 				47119A3E2B35F94600B94F58 /* CardView.swift in Sources */,

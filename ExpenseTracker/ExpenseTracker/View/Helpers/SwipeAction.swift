@@ -45,7 +45,6 @@ struct SwipeAction<Content: View>: View {
                             }
                         }
                         .id(viewID)
-                        .transition(.identity)
                         .overlay {
                             GeometryReader {
                                 let minX = $0.frame(in: .scrollView(axis: .horizontal)).minX
@@ -85,7 +84,7 @@ struct SwipeAction<Content: View>: View {
             .rotationEffect(.init(degrees: direction == .leading ? -180 : 0))
         }
         .allowsHitTesting(isEnabled)
-        .transition(CustomTransition())
+//        .transition(CustomTransition())
     }
     
     func scrollOffset(_ proxy: GeometryProxy) -> CGFloat {
@@ -131,22 +130,6 @@ struct SwipeAction<Content: View>: View {
                 }
             }
                    
-    }
-}
-
-/// Custom Transition
-struct CustomTransition: Transition {
-    func body(content: Content, phase: TransitionPhase) -> some View {
-        content
-            .mask {
-                GeometryReader {
-                    let size = $0.size
-                    
-                    Rectangle()
-                        .offset(y: phase == .identity ? 0 : -size.height)
-                }
-                .containerRelativeFrame(.horizontal)
-            }
     }
 }
 
