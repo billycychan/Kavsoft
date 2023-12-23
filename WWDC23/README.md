@@ -1,7 +1,7 @@
 
 ## Projects
 
- - [Swipe Actions For ScrollView - No Gestures! - iOS 17 Scroll APIs - Xcode 15](https://www.youtube.com/watch?v=K8VnH2eEnK4&ab_channel=Kavsoft) || [CustomSwipeAction](./WWDC23/CustomSwipeAction)
+ - [Swipe Actions For ScrollView - No Gestures! - iOS 17 Scroll APIs - Xcode 15](https://www.youtube.com/watch?v=K8VnH2eEnK4&ab_channel=Kavsoft) || [CustomSwipeAction](./CustomSwipeAction)
 
 
 
