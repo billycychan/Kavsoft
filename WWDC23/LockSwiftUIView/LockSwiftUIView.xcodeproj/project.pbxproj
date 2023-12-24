@@ -21,6 +21,7 @@
 		47FCF0A52B37589B00B7BCDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47FCF0A82B37589B00B7BCDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47FCF0B02B3758BD00B7BCDB /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		47FCF0B22B37684300B7BCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		47FCF0A02B37589A00B7BCDB /* LockSwiftUIView */ = {
 			isa = PBXGroup;
 			children = (
+				47FCF0B22B37684300B7BCDB /* Info.plist */,
 				47FCF0AF2B3758B300B7BCDB /* View */,
 				47FCF0A12B37589A00B7BCDB /* LockSwiftUIViewApp.swift */,
 				47FCF0A32B37589A00B7BCDB /* ContentView.swift */,
@@ -287,6 +289,8 @@
 				DEVELOPMENT_TEAM = FB43AR359A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockSwiftUIView/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,6 +320,8 @@
 				DEVELOPMENT_TEAM = FB43AR359A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockSwiftUIView/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

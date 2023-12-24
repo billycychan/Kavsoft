@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct LockView<Content: View>: View {
     
@@ -21,6 +22,11 @@ struct LockView<Content: View>: View {
     @State private var isUnlocked: Bool = false
     @State private var noBiometricAccess: Bool = false
 
+    /// Lock Context
+    let context = LAContext()
+    
+    @Environment(\.scenePhase) private var scenePhase
+    
     var body: some View {
         GeometryReader {
             let size = $0.size
@@ -31,8 +37,9 @@ struct LockView<Content: View>: View {
             if isEnabled && !isUnlocked {
                 ZStack {
                     Rectangle()
+                        .fill(.black)
                         .ignoresSafeArea()
-                    if lockType == .both || lockType == .biometric {
+                    if (lockType == .both && !noBiometricAccess) || lockType == .biometric {
                         Group {
                             if noBiometricAccess {
                                 Text("Enable biometric authentication in settings to unlock the view.")
@@ -53,7 +60,7 @@ struct LockView<Content: View>: View {
                                     .background(.ultraThinMaterial, in: .rect(cornerRadius: 10))
                                     .contentShape(.rect)
                                     .onTapGesture {
-                                        
+                                        unlockView()
                                     }
                                     
                                     if lockType == .both {
@@ -62,7 +69,7 @@ struct LockView<Content: View>: View {
                                             .background(.ultraThinMaterial, in: .rect(cornerRadius: 10))
                                             .contentShape(.rect)
                                             .onTapGesture {
-                                                
+                                                noBiometricAccess = true
                                             }
                                     }
                                 }
@@ -78,14 +85,64 @@ struct LockView<Content: View>: View {
                 .transition(.move(edge: .trailing))
             }
         }
+        .onChange(of: isEnabled, initial: true) { oldValue, newValue in
+            if newValue {
+                unlockView()
+            }
+        }
+        .onChange(of: scenePhase) { oldValue, newValue in
+            if newValue != .active && lockWhenAppGoesBackground {
+                isUnlocked = false
+                pin = ""
+            }
+        }
+    }
+    
+    private func unlockView() {
+        Task {
+            if isBiometricAvailable && lockType != .number {
+                if let result = try? await context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Unlock The view"), result {
+                    print("unlocked")
+                    withAnimation(.snappy, completionCriteria: .logicallyComplete) {
+                        isUnlocked = true
+                    } completion: {
+                        pin = ""
+                    }
+
+                }
+            }
+            
+            // No Biometric permission || Lock Type Must be Set as Keypad
+            /// udpating biometric status
+            noBiometricAccess = !isBiometricAvailable
+        }
+    }
+    
+    private var isBiometricAvailable: Bool {
+        return context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
     }
     
     @ViewBuilder
-    func NumberPadPinView() -> some View {
+    private func NumberPadPinView() -> some View {
         VStack(spacing: 15) {
             Text("Enter Pin")
                 .font(.title.bold())
                 .frame(maxWidth: .infinity)
+                .overlay(alignment: .leading) {
+                    // back button only for "both" lock type
+                    if lockType == .both && isBiometricAvailable{
+                        Button(action: {
+                            pin = ""
+                            noBiometricAccess = false
+                        }) {
+                            Image(systemName: "arrow.left")
+                                .font(.title3)
+                                .contentShape(.rect)
+                        }
+                        .tint(.white)
+                        .padding(.leading)
+                    }
+                }
             
             /// Adding Wiggling Animation for Wrong passwor with keyframe animation
             HStack(spacing: 10) {
@@ -186,6 +243,7 @@ struct LockView<Content: View>: View {
                             isUnlocked = true
                         } completion: {
                             pin = ""
+                            noBiometricAccess = !isBiometricAvailable
                         }
 
                         //print("Unlocked")
