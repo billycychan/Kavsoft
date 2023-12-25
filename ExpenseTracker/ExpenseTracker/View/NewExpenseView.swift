@@ -11,6 +11,7 @@ struct NewExpenseView: View {
     /// Env Properties
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
+    var editTransaction: Transaction?
     
     /// View Properties
     @State private var title: String = ""
@@ -19,7 +20,7 @@ struct NewExpenseView: View {
     @State private var dateAdded: Date = .now
     @State private var category: Category = .expense
     
-    var tint: TintColor = tints.randomElement()!
+    @State var tint: TintColor = tints.randomElement()!
     
     var body: some View {
         ScrollView(.vertical) {
@@ -82,14 +83,39 @@ struct NewExpenseView: View {
                 Button("Save", action: save)
             }
         }
+        .onAppear(perform: {
+            if let editTransaction {
+                /// Load All Exisitng Data from the Transaction
+                title = editTransaction.title
+                remarks = editTransaction.remarks
+                dateAdded = editTransaction.dataAdded
+                
+                if let category = editTransaction.rawCategory {
+                    self.category = category
+                }
+                
+                amount = editTransaction.amount
+                if let tint = editTransaction.tint  {
+                    self.tint = tint
+                }
+            }
+        })
     }
     
     /// Saving Data
     func save() {
-        /// Saving Item to SwiftData
-        let transaction = Transaction(title: title, remarks: remarks, amount: amount, dataAdded: dateAdded, category: category, tintColor: tint)
-        context.insert(transaction)
-        /// Dismissing View
+        if editTransaction != nil {
+            editTransaction?.title = title
+            editTransaction?.remarks = remarks
+            editTransaction?.amount = amount
+            editTransaction?.category = category.rawValue
+            editTransaction?.dataAdded = dateAdded
+            
+        } else {
+            let transaction = Transaction(title: title, remarks: remarks, amount: amount, dataAdded: dateAdded, category: category, tintColor: tint)
+            context.insert(transaction)
+        }
+        
         dismiss()
     }
     
@@ -115,12 +141,12 @@ struct NewExpenseView: View {
                 HStack(spacing: 5) {
                     ZStack {
                         Image(systemName: "circle")
-                            .font(.title3)
+                            .font(.caption2)
                             .foregroundColor(appTint)
                         
                         if self.category == category {
                             Image(systemName: "circle.fill")
-                                .font(.caption)
+                                .font(.caption2)
                                 .foregroundColor(appTint)
                         }
                     }

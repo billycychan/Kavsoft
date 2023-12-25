@@ -48,7 +48,7 @@ struct Recents: View {
                                 .padding(.bottom, 10)
                             ForEach(transactions) { transaction in
                                 NavigationLink {
-                                    NewExpenseView()
+                                    NewExpenseView(editTransaction: transaction)
                                 } label: {
                                     TransactionCardView(transaction: transaction)
                                 }
