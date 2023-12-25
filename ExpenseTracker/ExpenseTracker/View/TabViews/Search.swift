@@ -22,9 +22,7 @@ struct Search: View {
                 LazyVStack(spacing: 12) {
                     FilterTransactionView(category: selectedCategory, searchText: filterText) { transactions in
                         ForEach(transactions) { transaction in
-                            NavigationLink {
-                                TransactionView(editTransaction: transaction)
-                            } label: {
+                            NavigationLink(value: transaction) {
                                 TransactionCardView(transaction: transaction, showCategory: true)
                             }
                             .buttonStyle(.plain)
@@ -52,6 +50,9 @@ struct Search: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     ToolbarContent()
                 }
+            }
+            .navigationDestination(for: Transaction.self) { transaction in
+                TransactionView(editTransaction: transaction)
             }
         }
     }
