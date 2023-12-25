@@ -25,7 +25,7 @@ struct Search: View {
                             NavigationLink {
                                 TransactionView(editTransaction: transaction)
                             } label: {
-                                TransactionCardView(transaction: transaction)
+                                TransactionCardView(transaction: transaction, showCategory: true)
                             }
                             .buttonStyle(.plain)
                         }
@@ -47,6 +47,43 @@ struct Search: View {
                 filterText = searchText
             })
             .navigationTitle("Search")
+            .background(.gray.opacity(0.15))
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    ToolbarContent()
+                }
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func ToolbarContent() -> some View {
+        Menu {
+            Button {
+                selectedCategory = nil
+            } label: {
+                HStack {
+                    Text("Both")
+                    if selectedCategory == nil {
+                        Image(systemName: "checkmark")
+                    }
+                }
+            }
+            
+            ForEach(Category.allCases, id: \.rawValue) { category in
+                Button {
+                    selectedCategory = category
+                } label: {
+                    HStack {
+                        Text(category.rawValue)
+                        if selectedCategory == category {
+                            Image(systemName: "checkmark")
+                        }
+                    }
+                }
+            }
+        } label: {
+            Image(systemName: "slider.vertical.3")
         }
     }
 }
