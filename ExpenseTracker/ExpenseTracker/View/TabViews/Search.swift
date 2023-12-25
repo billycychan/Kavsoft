@@ -12,14 +12,24 @@ import Combine
 struct Search: View {
     @State private var searchText: String = ""
     @State private var filterText: String = ""
-
+    @State private var selectedCategory: Category? = nil
+    
     let searchPublisher = PassthroughSubject<String, Never>()
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 12) {
-                    
+                    FilterTransactionView(category: selectedCategory, searchText: filterText) { transactions in
+                        ForEach(transactions) { transaction in
+                            NavigationLink {
+                                TransactionView(editTransaction: transaction)
+                            } label: {
+                                TransactionCardView(transaction: transaction)
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
                 }
             }
             .searchable(text: $searchText)
