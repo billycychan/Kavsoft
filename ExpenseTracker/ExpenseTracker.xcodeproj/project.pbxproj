@@ -30,6 +30,7 @@
 		47FCF0B42B37C50500B7BCDB /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0B32B37C50500B7BCDB /* LockView.swift */; };
 		47FCF0B72B39E17300B7BCDB /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0B62B39E17300B7BCDB /* TransactionView.swift */; };
 		47FCF0B92B39F2AC00B7BCDB /* FilterTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0B82B39F2AC00B7BCDB /* FilterTransactionView.swift */; };
+		47FCF0BB2B3A187600B7BCDB /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0BA2B3A187600B7BCDB /* ChartModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		47FCF0B52B37C56900B7BCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		47FCF0B62B39E17300B7BCDB /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		47FCF0B82B39F2AC00B7BCDB /* FilterTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTransactionView.swift; sourceTree = "<group>"; };
+		47FCF0BA2B3A187600B7BCDB /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				47119A292B35CE4A00B94F58 /* Category.swift */,
 				47119A2B2B35CE7F00B94F58 /* Transaction.swift */,
 				47119A2D2B35CED800B94F58 /* TintColor.swift */,
+				47FCF0BA2B3A187600B7BCDB /* ChartModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				47119A152B35C7C900B94F58 /* ContentView.swift in Sources */,
 				47119A3E2B35F94600B94F58 /* CardView.swift in Sources */,
 				47FCF0922B36296300B7BCDB /* SwipeAction.swift in Sources */,
+				47FCF0BB2B3A187600B7BCDB /* ChartModel.swift in Sources */,
 				47119A232B35C82C00B94F58 /* IntroScreen.swift in Sources */,
 				47FCF0B72B39E17300B7BCDB /* TransactionView.swift in Sources */,
 				47119A282B35CBC900B94F58 /* Tab.swift in Sources */,
