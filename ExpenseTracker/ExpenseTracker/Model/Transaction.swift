@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
-struct Transaction: Identifiable {
-    let id: UUID = .init()
+@Model
+class Transaction {
+//    let id: UUID = .init()
     
     var title: String
     var remarks: String
@@ -32,9 +34,9 @@ struct Transaction: Identifiable {
     }
 }
 
-var sampleTransactions: [Transaction] = [
-    .init(title: "Magic Keyboard", remarks: "Apple Product", amount: 129, dataAdded: .now, category: .expense, tintColor: tints.randomElement()!),
-    .init(title: "Apple Music", remarks: "Subscription", amount: 10.99, dataAdded: .now, category: .expense, tintColor: tints.randomElement()!),
-    .init(title: "iCloud+", remarks: "Subscription", amount: 0.99, dataAdded: .now, category: .expense, tintColor: tints.randomElement()!),
-    .init(title: "Payment", remarks: "Payment Received!", amount: 2499, dataAdded: .now, category: .income, tintColor: tints.randomElement()!)
-]
+//var sampleTransactions: [Transaction] = [
+//    .init(title: "Magic Keyboard", remarks: "Apple Product", amount: 129, dataAdded: .now, category: .expense, tintColor: tints.randomElement()!),
+//    .init(title: "Apple Music", remarks: "Subscription", amount: 10.99, dataAdded: .now, category: .expense, tintColor: tints.randomElement()!),
+//    .init(title: "iCloud+", remarks: "Subscription", amount: 0.99, dataAdded: .now, category: .expense, tintColor: tints.randomElement()!),
+//    .init(title: "Payment", remarks: "Payment Received!", amount: 2499, dataAdded: .now, category: .income, tintColor: tints.randomElement()!)
+//]
