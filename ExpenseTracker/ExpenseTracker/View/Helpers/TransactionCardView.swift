@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TransactionCardView: View {
+    @Environment (\.modelContext) private var context
     
     var transaction: Transaction
     
@@ -43,7 +44,7 @@ struct TransactionCardView: View {
             .background(.background, in: .rect(cornerRadius: 10))
         } actions: {
             Action(tint: .red, icon: "trash") {
-                //TODO: later
+                context.delete(transaction)
             }
         }
 

@@ -50,11 +50,15 @@ struct NewExpenseView: View {
                         .hSpacing(.leading)
                     
                     HStack(spacing: 15) {
-                        TextField("0.0", value: $amount, formatter: numberFormatter)
-                            .padding(.horizontal, 15)
-                            .padding(.vertical, 12)
-                            .background(.background, in: .rect(cornerRadius: 10))
-                            .keyboardType(.decimalPad)
+                        HStack(spacing: 4) {
+                            Text(currencySymbol)
+                                .font(.callout.bold())
+                            TextField("0.0", value: $amount, formatter: numberFormatter)
+                                .keyboardType(.decimalPad)
+                        }
+                        .padding(.horizontal, 15)
+                        .padding(.vertical, 12)
+                        .background(.background, in: .rect(cornerRadius: 10))
                         CategoryCheckBox()
                     }
                 }
@@ -76,7 +80,7 @@ struct NewExpenseView: View {
             }
             .padding(15)
         }
-        .navigationTitle("Add Transaction")
+        .navigationTitle("\(editTransaction == nil ? "Add" : "Edit") Transaction")
         .background(.gray.opacity(0.15))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {

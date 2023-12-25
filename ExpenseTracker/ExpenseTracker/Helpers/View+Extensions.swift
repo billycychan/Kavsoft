@@ -40,4 +40,9 @@ extension View {
         
         return formatter.string(from: .init(value: value)) ?? ""
     }
+    
+    var currencySymbol: String {
+        let locale = Locale.current
+        return locale.currencySymbol ?? ""
+    }
 }
