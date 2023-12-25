@@ -34,13 +34,11 @@ struct SimpleEntry: TimelineEntry {
 
 struct StatsCardViewEntryView : View {
     var entry: Provider.Entry
-
+    
     var body: some View {
-        VStack {
-            FilterTransactionView(startDate: .now.startOfMonth, endDate: .now.endOfMonth) { transactions in
-                CardView(income: total(transactions, category: .income),
-                         expense: total(transactions, category: .expense))
-            }
+        FilterTransactionView(startDate: .now.startOfMonth, endDate: .now.endOfMonth) { transactions in
+            CardView(income: total(transactions, category: .income),
+                     expense: total(transactions, category: .expense))
         }
     }
 }
@@ -52,7 +50,10 @@ struct StatsCardView: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             StatsCardViewEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
+                .modelContainer(for: Transaction.self)
         }
+        
+        .supportedFamilies([.systemMedium])
         .contentMarginsDisabled()
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")

@@ -72,7 +72,6 @@ struct CardView: View {
 
 #Preview {
     VStack {
-//        CardView(income: 1234, expense: 4566)
         CardView(income: 4566, expense: 1235)
     }
 }

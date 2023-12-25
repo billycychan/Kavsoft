@@ -25,9 +25,9 @@
 		47119A3B2B35F7AF00B94F58 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A3A2B35F7AF00B94F58 /* Date+Extensions.swift */; };
 		47119A3E2B35F94600B94F58 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A3D2B35F94600B94F58 /* CardView.swift */; };
 		47119A402B35FF6000B94F58 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47119A3F2B35FF6000B94F58 /* TransactionCardView.swift */; };
+		47AEE9A22B3B7150003428E4 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AEE9A12B3B7150003428E4 /* LockView.swift */; };
 		47FCF0922B36296300B7BCDB /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0912B36296300B7BCDB /* SwipeAction.swift */; };
 		47FCF0942B362AE600B7BCDB /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0932B362AE600B7BCDB /* DateFilterView.swift */; };
-		47FCF0B42B37C50500B7BCDB /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0B32B37C50500B7BCDB /* LockView.swift */; };
 		47FCF0B72B39E17300B7BCDB /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0B62B39E17300B7BCDB /* TransactionView.swift */; };
 		47FCF0B92B39F2AC00B7BCDB /* FilterTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0B82B39F2AC00B7BCDB /* FilterTransactionView.swift */; };
 		47FCF0BB2B3A187600B7BCDB /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0BA2B3A187600B7BCDB /* ChartModel.swift */; };
@@ -91,9 +91,9 @@
 		47119A3A2B35F7AF00B94F58 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		47119A3D2B35F94600B94F58 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		47119A3F2B35FF6000B94F58 /* TransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		47AEE9A12B3B7150003428E4 /* LockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 		47FCF0912B36296300B7BCDB /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
 		47FCF0932B362AE600B7BCDB /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
-		47FCF0B32B37C50500B7BCDB /* LockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LockView.swift; path = ../../../../WWDC23/LockSwiftUIView/LockSwiftUIView/View/LockView.swift; sourceTree = "<group>"; };
 		47FCF0B52B37C56900B7BCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		47FCF0B62B39E17300B7BCDB /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		47FCF0B82B39F2AC00B7BCDB /* FilterTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTransactionView.swift; sourceTree = "<group>"; };
@@ -105,6 +105,8 @@
 		47FCF0E62B3A25D700B7BCDB /* StatsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCardView.swift; sourceTree = "<group>"; };
 		47FCF0E82B3A25D800B7BCDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47FCF0EA2B3A25D800B7BCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47FCF0FA2B3A27E800B7BCDB /* ExpenseTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExpenseTracker.entitlements; sourceTree = "<group>"; };
+		47FCF0FB2B3A301700B7BCDB /* StatsCardViewExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StatsCardViewExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		47119A062B35C7C900B94F58 = {
 			isa = PBXGroup;
 			children = (
+				47FCF0FB2B3A301700B7BCDB /* StatsCardViewExtension.entitlements */,
 				47119A112B35C7C900B94F58 /* ExpenseTracker */,
 				47FCF0E32B3A25D700B7BCDB /* StatsCardView */,
 				47FCF0DE2B3A25D700B7BCDB /* Frameworks */,
@@ -149,6 +152,7 @@
 		47119A112B35C7C900B94F58 /* ExpenseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				47FCF0FA2B3A27E800B7BCDB /* ExpenseTracker.entitlements */,
 				47FCF0B52B37C56900B7BCDB /* Info.plist */,
 				47119A242B35C8D400B94F58 /* Helpers */,
 				47119A202B35C81D00B94F58 /* Model */,
@@ -217,7 +221,7 @@
 		47119A3C2B35F93E00B94F58 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				47FCF0B32B37C50500B7BCDB /* LockView.swift */,
+				47AEE9A12B3B7150003428E4 /* LockView.swift */,
 				47119A3D2B35F94600B94F58 /* CardView.swift */,
 				47119A3F2B35FF6000B94F58 /* TransactionCardView.swift */,
 				47FCF0912B36296300B7BCDB /* SwipeAction.swift */,
@@ -348,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47119A2E2B35CED800B94F58 /* TintColor.swift in Sources */,
+				47AEE9A22B3B7150003428E4 /* LockView.swift in Sources */,
 				47119A312B35D05600B94F58 /* Recents.swift in Sources */,
 				47FCF0B92B39F2AC00B7BCDB /* FilterTransactionView.swift in Sources */,
 				47FCF0942B362AE600B7BCDB /* DateFilterView.swift in Sources */,
@@ -364,7 +369,6 @@
 				47119A332B35D05C00B94F58 /* Search.swift in Sources */,
 				47119A3B2B35F7AF00B94F58 /* Date+Extensions.swift in Sources */,
 				47119A392B35D17C00B94F58 /* View+Extensions.swift in Sources */,
-				47FCF0B42B37C50500B7BCDB /* LockView.swift in Sources */,
 				47119A262B35C8DD00B94F58 /* Constants.swift in Sources */,
 				47119A352B35D06200B94F58 /* Graphs.swift in Sources */,
 				47119A2A2B35CE4A00B94F58 /* Category.swift in Sources */,
@@ -525,6 +529,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ExpenseTracker/ExpenseTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpenseTracker/Preview Content\"";
@@ -557,6 +562,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ExpenseTracker/ExpenseTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpenseTracker/Preview Content\"";
@@ -588,6 +594,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StatsCardViewExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FB43AR359A;
@@ -615,6 +622,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = StatsCardViewExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FB43AR359A;
