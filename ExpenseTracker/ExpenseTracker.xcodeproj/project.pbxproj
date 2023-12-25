@@ -28,6 +28,7 @@
 		47FCF0922B36296300B7BCDB /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0912B36296300B7BCDB /* SwipeAction.swift */; };
 		47FCF0942B362AE600B7BCDB /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0932B362AE600B7BCDB /* DateFilterView.swift */; };
 		47FCF0B42B37C50500B7BCDB /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0B32B37C50500B7BCDB /* LockView.swift */; };
+		47FCF0B72B39E17300B7BCDB /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FCF0B62B39E17300B7BCDB /* NewExpenseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		47FCF0932B362AE600B7BCDB /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
 		47FCF0B32B37C50500B7BCDB /* LockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LockView.swift; path = ../../../../WWDC23/LockSwiftUIView/LockSwiftUIView/View/LockView.swift; sourceTree = "<group>"; };
 		47FCF0B52B37C56900B7BCDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		47FCF0B62B39E17300B7BCDB /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				47119A3C2B35F93E00B94F58 /* Helpers */,
 				47119A2F2B35D04A00B94F58 /* TabViews */,
 				47119A222B35C82C00B94F58 /* IntroScreen.swift */,
+				47FCF0B62B39E17300B7BCDB /* NewExpenseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				47119A3E2B35F94600B94F58 /* CardView.swift in Sources */,
 				47FCF0922B36296300B7BCDB /* SwipeAction.swift in Sources */,
 				47119A232B35C82C00B94F58 /* IntroScreen.swift in Sources */,
+				47FCF0B72B39E17300B7BCDB /* NewExpenseView.swift in Sources */,
 				47119A282B35CBC900B94F58 /* Tab.swift in Sources */,
 				47119A372B35D06900B94F58 /* Settings.swift in Sources */,
 				47119A132B35C7C900B94F58 /* ExpenseTrackerApp.swift in Sources */,
