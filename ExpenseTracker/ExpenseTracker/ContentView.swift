@@ -16,7 +16,7 @@ struct ContentView: View {
     @State private var activeTab: Tab = .recents
     
     var body: some View {
-        LockView(lockType: .biometric, lockPin: "", isEnabled: isAppLockEnabled, lockWhenAppGoesBackground: lockWhenAppGoesBackground) {
+        LockView(lockType: .both, lockPin: "", isEnabled: isAppLockEnabled, lockWhenAppGoesBackground: lockWhenAppGoesBackground) {
             TabView(selection: $activeTab) {
                 Recents()
                     .tag(Tab.recents)
